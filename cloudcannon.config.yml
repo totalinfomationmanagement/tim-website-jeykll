@@ -8,18 +8,15 @@ collections_config:
     singular_name: Article
     icon: newspaper
 
-    # File naming pattern for new posts
+    # path is already _posts, so create path must NOT include _posts again
     create:
       path: "{date|year}-{date|month}-{date|day}-{title|slugify}.md"
 
-    # Schema for new articles
     schemas:
       default:
         path: .cloudcannon/schemas/article.md
         name: New Article
-        remove_extra_inputs: false
 
-    # Hide _schema field (internal CloudCannon field, not needed in output)
     _inputs:
       _schema:
         hidden: true
@@ -33,10 +30,8 @@ collections_config:
       date:
         type: date
         label: Publication Date
-        instance_value: NOW
         options:
           date_format: YYYY-MM-DD
-          empty_type: string
       tag:
         type: select
         label: Category
@@ -56,6 +51,5 @@ collections_config:
       excerpt:
         type: textarea
         label: Summary
-        comment: "Short summary shown on the news page (1-2 sentences)"
 
 timezone: Africa/Nairobi

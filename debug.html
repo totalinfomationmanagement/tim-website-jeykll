@@ -1,0 +1,24 @@
+---
+layout: default
+title: Debug - Post List
+permalink: /debug/
+---
+<div style="padding:120px 48px 48px;font-family:monospace;background:#f4f6f8;min-height:100vh;">
+  <h1 style="margin-bottom:24px;font-size:24px;">Jekyll Post Debug</h1>
+  <p style="margin-bottom:24px;">Total posts found by Jekyll: <strong>{{ site.posts | size }}</strong></p>
+  {% for post in site.posts %}
+  <div style="background:white;padding:16px;margin-bottom:12px;border-left:4px solid #1A7DA0;">
+    <div><strong>Title:</strong> {{ post.title }}</div>
+    <div><strong>Date:</strong> {{ post.date }}</div>
+    <div><strong>URL:</strong> {{ post.url | relative_url }}</div>
+    <div><strong>Layout:</strong> {{ post.layout }}</div>
+    <div><strong>Tag:</strong> {{ post.tag }}</div>
+    <div><strong>Published:</strong> {{ post.published }}</div>
+    <div><strong>Path:</strong> {{ post.path }}</div>
+  </div>
+  {% else %}
+  <div style="background:#fee;padding:16px;border-left:4px solid red;">
+    <strong>No posts found.</strong> Jekyll cannot see any files in _posts.
+  </div>
+  {% endfor %}
+</div>

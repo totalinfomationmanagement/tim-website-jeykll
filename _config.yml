@@ -4,15 +4,24 @@ description: ICT Policy, Strategy & Development Consultants - Nairobi, Kenya
 url: "https://totalinfomationmanagement.github.io"
 baseurl: "/tim-website-jeykll"
 
+theme: null
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
 permalink: /news/:slug/
-
-# Publish future-dated posts
 future: true
 
-# Defaults applied to every post automatically
+# Tell Jekyll to look for posts in ALL subdirectories of _posts
+collections_dir: .
+
+# Explicitly define posts collection
+collections:
+  posts:
+    output: true
+    permalink: /news/:slug/
+
+# Defaults for all posts
 defaults:
   - scope:
       path: ""
@@ -22,7 +31,6 @@ defaults:
       author: TiM Editorial Team
       published: true
 
-# Exclude from build
 exclude:
   - Gemfile
   - Gemfile.lock
@@ -34,4 +42,3 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-feed
-theme: null
