@@ -20,11 +20,14 @@ permalink: /news/
 
 <div class="articles-section">
   <div class="articles-grid" id="articles-grid">
-    {% for post in site.posts %}
-    <a href="{{ post.url | relative_url }}" class="article-card {% if forloop.first %}featured{% endif %}" data-tag="{{ post.tag }}">
-      <div class="article-tag">{{ post.tag }}</div>
+    {% assign all_posts = site.posts %}
+    {% for post in all_posts %}
+    <a href="{{ post.url | relative_url }}" class="article-card {% if forloop.first %}featured{% endif %}" data-tag="{{ post.tag | default: 'News' }}">
+      <div class="article-tag">{{ post.tag | default: 'News' }}</div>
       <h2>{{ post.title }}</h2>
+      {% if post.excerpt %}
       <p class="article-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      {% endif %}
       <div class="article-meta">
         <span class="article-date">{{ post.date | date: "%B %Y" }}</span>
         <span class="article-read">Read more</span>
@@ -36,7 +39,7 @@ permalink: /news/
 
 <script>
   function filterArticles(tag, btn) {
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.filter-btn').forEach(function(b) { b.classList.remove('active'); });
     btn.classList.add('active');
     document.querySelectorAll('.article-card').forEach(function(card) {
       card.style.display = (tag === 'all' || card.dataset.tag === tag) ? '' : 'none';

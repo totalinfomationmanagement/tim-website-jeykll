@@ -1,5 +1,4 @@
 # CloudCannon Configuration - TiM Ltd.
-# Docs: https://cloudcannon.com/documentation/
 
 collections_config:
   posts:
@@ -9,22 +8,35 @@ collections_config:
     singular_name: Article
     icon: newspaper
 
-    # This tells CloudCannon how to name new files
+    # File naming pattern for new posts
     create:
       path: _posts/{date|year}-{date|month}-{date|day}-{title|slugify}.md
 
-    # Schema used when clicking "Add Article"
+    # Schema for new articles
     schemas:
       default:
         path: .cloudcannon/schemas/article.md
         name: New Article
+        remove_extra_inputs: false
 
-    # Fields shown in the sidebar editor
+    # Hide _schema field (internal CloudCannon field, not needed in output)
     _inputs:
+      _schema:
+        hidden: true
+      layout:
+        hidden: true
+      published:
+        hidden: true
       title:
         type: text
         label: Article Title
-        comment: The full headline of the article
+      date:
+        type: date
+        label: Publication Date
+        instance_value: NOW
+        options:
+          date_format: YYYY-MM-DD
+          empty_type: string
       tag:
         type: select
         label: Category
@@ -44,39 +56,6 @@ collections_config:
       excerpt:
         type: textarea
         label: Summary
-        comment: "Short summary shown on the news listing page (1-2 sentences)"
+        comment: "Short summary shown on the news page (1-2 sentences)"
 
-    # Rich text editor options for the article body
-    _editables:
-      content:
-        allow_custom_markup: false
-        bold: true
-        format: p h2 h3
-        italic: true
-        strike: false
-        subscript: false
-        superscript: false
-        underline: false
-        link: true
-        bulletedlist: true
-        numberedlist: true
-        blockquote: true
-        horizontalrule: true
-        image: false
-        table: false
-        undo: true
-        redo: true
-
-# Global editor settings
-_inputs:
-  date:
-    type: date
-    label: Publication Date
-
-# Source editor settings
-source_editor:
-  tab_size: 2
-
-# Path to the built site
-build:
-  output_path: _site
+timezone: Africa/Nairobi
