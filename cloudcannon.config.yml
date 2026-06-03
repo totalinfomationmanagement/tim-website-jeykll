@@ -10,7 +10,7 @@ collections_config:
 
     # File naming pattern for new posts
     create:
-      path: _posts/{date|year}-{date|month}-{date|day}-{title|slugify}.md
+      path: "{date|year}-{date|month}-{date|day}-{title|slugify}.md"
 
     # Schema for new articles
     schemas:
