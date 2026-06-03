@@ -1,9 +1,10 @@
 ---
-title: New Article Title
+title: Your Article Title Here
+date: 2025-06-03
 tag: Insight
 author: TiM Editorial Team
 read_time: 5 min read
-excerpt: A brief summary of this article for the news listing page.
+excerpt: A one or two sentence summary of this article. This appears on the news listing page.
 related:
   - slug: kenya-national-data-governance-policy
     tag: Featured
@@ -19,22 +20,22 @@ related:
     date: July 2024
 ---
 
-Write your opening paragraph here. Summarise the article clearly and draw the reader in. Keep it to 2-3 sentences.
+Write your opening paragraph here. Summarise the article and draw the reader in. Keep it to 2-3 sentences.
 
-Continue with your second paragraph here. Provide essential context or background.
+Add your second paragraph here. Provide essential context or background.
 
-## Section Heading
+## First Section Heading
 
-Body paragraph for this section. Replace this with your real content.
+Body paragraph for this section. Replace with your real content. Keep paragraphs focused - one main idea per paragraph works best.
 
 - Bullet point one
-- Bullet point two
+- Bullet point two  
 - Bullet point three
 
-## Another Section Heading
+## Second Section Heading
 
 Continue your article here. Add as many sections as needed.
 
-> Pull quote goes here - a memorable statement or key finding.
->
-> *- Source or speaker name*
+## Conclusion
+
+Your closing paragraph. What should the reader take away from this article?

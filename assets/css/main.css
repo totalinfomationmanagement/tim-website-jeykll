@@ -1,6 +1,6 @@
-
-
-    :root {
+---
+---
+:root {
       --navy:      #1A3C5E;
       --teal:      #1A7DA0;
       --amber:     #C9A227;
@@ -216,4 +216,3 @@
     .form-group textarea { min-height:100px; resize:vertical; }
     .form-submit { width:100%; background:var(--navy); color:white; border:none; padding:14px; font-family:var(--sans); font-size:14px; letter-spacing:0.12em; text-transform:uppercase; cursor:pointer; transition:background 0.2s; margin-top:8px; }
     .form-submit:hover { background:var(--teal); }
-  

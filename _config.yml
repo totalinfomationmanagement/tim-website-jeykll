@@ -1,20 +1,16 @@
 title: Total Information Management Ltd.
-description: ICT Policy, Strategy & Development Consultants — Nairobi, Kenya
+description: ICT Policy, Strategy & Development Consultants - Nairobi, Kenya
 url: ""
 baseurl: ""
 
 # Build settings
 markdown: kramdown
 highlighter: rouge
+
+# Permalinks - clean URLs for posts
 permalink: /news/:slug/
 
-# Collections
-collections:
-  posts:
-    output: true
-    permalink: /news/:slug/
-
-# Defaults
+# Defaults - apply layout to all posts automatically
 defaults:
   - scope:
       path: ""
@@ -25,12 +21,14 @@ defaults:
 
 # Exclude from build
 exclude:
-  - README.md
   - Gemfile
   - Gemfile.lock
+  - README.md
   - node_modules
+  - vendor
 
-# Plugins
+# Plugins (supported by GitHub Pages)
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed

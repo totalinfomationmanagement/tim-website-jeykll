@@ -1,34 +1,33 @@
-# CloudCannon CMS Configuration for TiM Ltd.
+# CloudCannon Configuration - TiM Ltd.
+# Docs: https://cloudcannon.com/documentation/
+
 collections_config:
   posts:
     path: _posts
+    output: true
     name: Articles
     singular_name: Article
     icon: newspaper
-    add_options:
-      - name: Add Article
-        schema: default
-        icon: add
+
+    # This tells CloudCannon how to name new files
+    create:
+      path: _posts/{date|year}-{date|month}-{date|day}-{title|slugify}.md
+
+    # Schema used when clicking "Add Article"
     schemas:
       default:
         path: .cloudcannon/schemas/article.md
-    _editables:
-      content:
-        format: true
-        bold: true
-        italic: true
-        bulletedlist: true
-        numberedlist: true
-        link: true
-        blockquote: true
-        horizontalrule: true
+        name: New Article
+
+    # Fields shown in the sidebar editor
     _inputs:
       title:
+        type: text
         label: Article Title
-        comment: The full title of the article
+        comment: The full headline of the article
       tag:
-        label: Category
         type: select
+        label: Category
         options:
           values:
             - Featured
@@ -36,16 +35,48 @@ collections_config:
             - Insight
             - News
       author:
-        label: Author Name
+        type: text
+        label: Author
       read_time:
+        type: text
         label: Read Time
-        comment: e.g. 5 min read
+        comment: "e.g. 5 min read"
       excerpt:
-        label: Article Summary
-        comment: 1-2 sentence summary shown on the news listing page
         type: textarea
+        label: Summary
+        comment: "Short summary shown on the news listing page (1-2 sentences)"
 
-data_config:
-  true: true
+    # Rich text editor options for the article body
+    _editables:
+      content:
+        allow_custom_markup: false
+        bold: true
+        format: p h2 h3
+        italic: true
+        strike: false
+        subscript: false
+        superscript: false
+        underline: false
+        link: true
+        bulletedlist: true
+        numberedlist: true
+        blockquote: true
+        horizontalrule: true
+        image: false
+        table: false
+        undo: true
+        redo: true
 
-timezone: Africa/Nairobi
+# Global editor settings
+_inputs:
+  date:
+    type: date
+    label: Publication Date
+
+# Source editor settings
+source_editor:
+  tab_size: 2
+
+# Path to the built site
+build:
+  output_path: _site
