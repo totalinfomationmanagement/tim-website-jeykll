@@ -1,8 +1,8 @@
 title: Total Information Management Ltd.
 description: ICT Policy, Strategy & Development Consultants - Nairobi, Kenya
 
-url: "https://totalinfomationmanagement.github.io"
-baseurl: "/tim-website-jeykll"
+url: "https://totalinfomationmanagement.com"
+baseurl: ""
 
 theme: null
 
@@ -12,16 +12,11 @@ highlighter: rouge
 permalink: /news/:slug/
 future: true
 
-# Tell Jekyll to look for posts in ALL subdirectories of _posts
-collections_dir: .
-
-# Explicitly define posts collection
 collections:
   posts:
     output: true
     permalink: /news/:slug/
 
-# Defaults for all posts
 defaults:
   - scope:
       path: ""

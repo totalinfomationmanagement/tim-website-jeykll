@@ -1,0 +1,13 @@
+[build]
+  command = "jekyll build"
+  publish = "_site"
+
+[build.environment]
+  JEKYLL_ENV = "production"
+  RUBY_VERSION = "3.2.0"
+
+[[redirects]]
+  from = "/tim-website-jeykll/*"
+  to = "/:splat"
+  status = 301
+  force = true
