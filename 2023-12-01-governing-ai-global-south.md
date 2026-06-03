@@ -1,0 +1,52 @@
+<nav>
+  <a href="/" class="nav-logo">
+    <svg class="nav-logo-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1043.48 276.75">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&amp;display=swap');
+    </style>
+  </defs>
+  <!-- T letterform -->
+  <path fill="#ffffff" d="M130.01001,86.81319h-41.07007v135.20001h-37.31995V86.81319H0v-34.40997h126.72998c-.91992,3.94995-1.40002,8.06995-1.40002,12.29999,0,7.87,1.67004,15.34998,4.68005,22.10999Z"/>
+  <!-- I letterform -->
+  <path fill="#ffffff" d="M198.48999,115.92318v106.09003h-37.31006v-106.09003c5.82007,2.12,12.11011,3.28003,18.66003,3.28003s12.82996-1.16003,18.65002-3.28003Z"/>
+  <!-- M letterform -->
+  <path fill="#ffffff" d="M393.90991,52.40322v169.60999h-37.05994v-110.73004l-47.73999,72.45001h-.97009l-47.25-71.71997v110h-36.58984v-125.77002c6.31995-8.90997,10.03992-19.78998,10.03992-31.53998,0-4.23004-.47998-8.35004-1.40002-12.29999h31.58008l44.58997,71.71997,44.57996-71.71997h40.21997Z"/>
+  <!-- White circle (i-dot background) -->
+  <circle fill="#ffffff" cx="179.83694" cy="64.70424" r="44.4626"/>
+  <!-- Yellow dot 1 -->
+  <!-- Yellow dot 2 -->
+  <!-- Vertical divider -->
+  <rect fill="#ffffff" x="448.39047" y="0" width="5.22164" height="276.74638"/>
+  <!-- Right side text using Nunito to match logo font style -->
+  <text x="475" y="88" font-family="Nunito, 'IBM Plex Sans', sans-serif" font-weight="800" font-size="86" fill="#ffffff" dominant-baseline="auto">Total</text>
+  <text x="475" y="182" font-family="Nunito, 'IBM Plex Sans', sans-serif" font-weight="800" font-size="86" fill="#ffffff" dominant-baseline="auto">Infomation</text>
+  <text x="475" y="272" font-family="Nunito, 'IBM Plex Sans', sans-serif" font-weight="800" font-size="86" fill="#ffffff" dominant-baseline="auto">Management</text>
+</svg>
+  </a>
+  <ul class="nav-links">
+    <li><a href="/#about">About</a></li>
+    <li><a href="/#expertise">Expertise</a></li>
+    <li><a href="/#impact">Our Impact</a></li>
+    <li><a href="/news/">Updates</a></li>
+    <li><a href="/#work-with-us" class="nav-cta">Work With Us</a></li>
+  </ul>
+  <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="nav-overlay" id="nav-overlay"></div>
+<div class="nav-drawer" id="nav-drawer" aria-hidden="true">
+  <ul class="nav-drawer-links">
+    <li><a href="/#about" class="drawer-link">About</a></li>
+    <li><a href="/#expertise" class="drawer-link">Expertise</a></li>
+    <li><a href="/#impact" class="drawer-link">Our Impact</a></li>
+    <li><a href="/news/" class="drawer-link">Updates</a></li>
+  </ul>
+  <a href="/#work-with-us" class="nav-drawer-cta drawer-link">Work With Us</a>
+  <div class="nav-drawer-contact">
+    <p>Contact</p>
+    <a href="mailto:waema@uonbi.ac.ke">waema@uonbi.ac.ke</a>
+    <a href="tel:+254722517323">+254 722 517 323</a>
+  </div>
+</div>

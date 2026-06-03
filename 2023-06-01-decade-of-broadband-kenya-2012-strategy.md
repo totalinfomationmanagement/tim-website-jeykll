@@ -1,0 +1,53 @@
+<footer>
+  <div class="footer-brand">
+    <svg style="height:52px;width:auto;display:block;margin-bottom:16px;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1043.48 276.75">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&amp;display=swap');
+    </style>
+  </defs>
+  <!-- T letterform -->
+  <path fill="#ffffff" d="M130.01001,86.81319h-41.07007v135.20001h-37.31995V86.81319H0v-34.40997h126.72998c-.91992,3.94995-1.40002,8.06995-1.40002,12.29999,0,7.87,1.67004,15.34998,4.68005,22.10999Z"/>
+  <!-- I letterform -->
+  <path fill="#ffffff" d="M198.48999,115.92318v106.09003h-37.31006v-106.09003c5.82007,2.12,12.11011,3.28003,18.66003,3.28003s12.82996-1.16003,18.65002-3.28003Z"/>
+  <!-- M letterform -->
+  <path fill="#ffffff" d="M393.90991,52.40322v169.60999h-37.05994v-110.73004l-47.73999,72.45001h-.97009l-47.25-71.71997v110h-36.58984v-125.77002c6.31995-8.90997,10.03992-19.78998,10.03992-31.53998,0-4.23004-.47998-8.35004-1.40002-12.29999h31.58008l44.58997,71.71997,44.57996-71.71997h40.21997Z"/>
+  <!-- White circle (i-dot background) -->
+  <circle fill="#ffffff" cx="179.83694" cy="64.70424" r="44.4626"/>
+  <!-- Yellow dot 1 -->
+  <!-- Yellow dot 2 -->
+  <!-- Vertical divider -->
+  <rect fill="#ffffff" x="448.39047" y="0" width="5.22164" height="276.74638"/>
+  <!-- Right side text using Nunito to match logo font style -->
+  <text x="475" y="88" font-family="Nunito, 'IBM Plex Sans', sans-serif" font-weight="800" font-size="86" fill="#ffffff" dominant-baseline="auto">Total</text>
+  <text x="475" y="182" font-family="Nunito, 'IBM Plex Sans', sans-serif" font-weight="800" font-size="86" fill="#ffffff" dominant-baseline="auto">Infomation</text>
+  <text x="475" y="272" font-family="Nunito, 'IBM Plex Sans', sans-serif" font-weight="800" font-size="86" fill="#ffffff" dominant-baseline="auto">Management</text>
+</svg>
+    <div class="footer-name">Total Information Management Ltd.</div>
+    <div class="footer-sub">Information Management &amp; Development Consultants</div>
+    <p class="footer-tagline">Trusted advisors to governments, institutions, and development organisations since 1992.</p>
+  </div>
+  <div>
+    <div class="footer-section-title">Navigation</div>
+    <ul class="footer-links">
+      <li><a href="/#about">About Us</a></li>
+      <li><a href="/#expertise">Our Expertise</a></li>
+      <li><a href="/#impact">Our Impact</a></li>
+      <li><a href="/news/">News &amp; Updates</a></li>
+      <li><a href="/#work-with-us">Work With Us</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-section-title">Contact</div>
+    <ul class="footer-links">
+      <li><a href="mailto:waema@uonbi.ac.ke">waema@uonbi.ac.ke</a></li>
+      <li><a href="mailto:timwololo@gmail.com">timwololo@gmail.com</a></li>
+      <li><a href="tel:+254722517323">+254 722 517 323</a></li>
+      <li style="color:rgba(255,255,255,0.45);font-size:14px;padding-top:8px;">P.O. Box 15742 - 00100<br>Nairobi, Kenya</li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <p>&copy; 2025 Total Information Management Ltd. All rights reserved.</p>
+  <span class="footer-est">EST. 1992</span>
+</div>

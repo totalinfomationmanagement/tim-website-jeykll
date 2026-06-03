@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<div class="page-hero">
+  <div class="page-hero-label">
+    <a href="/">TiM Ltd.</a>
+    <span>/</span>
+    <a href="/news/">News &amp; Updates</a>
+    <span>/</span>
+    {{ page.tag }}
+  </div>
+  <div class="article-tag-pill">{{ page.tag }}</div>
+  <h1>{{ page.title }}</h1>
+  <div class="article-meta-hero">
+    <div class="article-meta-item"><label>Date</label><span>{{ page.date | date: "%B %Y" }}</span></div>
+    <div class="article-meta-item"><label>Author</label><span>{{ page.author }}</span></div>
+    <div class="article-meta-item"><label>Read time</label><span>{{ page.read_time }}</span></div>
+  </div>
+</div>
+
+<div class="article-body">
+  <a href="/news/" class="article-back">Back to all updates</a>
+  {{ content }}
+</div>
+
+{% if page.related %}
+<div class="related-articles">
+  <div class="related-label">Continue reading</div>
+  <div class="related-heading">Related articles</div>
+  <div class="related-grid">
+    {% for item in page.related %}
+    <a href="/news/{{ item.slug }}/" class="related-card">
+      <div class="related-card-tag">{{ item.tag }}</div>
+      <h3>{{ item.title }}</h3>
+      <div class="related-card-date">{{ item.date }}</div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
