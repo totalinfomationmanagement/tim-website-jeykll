@@ -1,8 +1,8 @@
 ---
 _schema: default
 layout: article
-title: Your Article Title Here 56789
-date: 2026-06-03T07:19:20+03:00
+title: Your Article Title Here
+date: 2026-06-03T08:04:04+03:00
 tag: Insight
 author: TiM Editorial Team
 read_time: 5 min read
@@ -15,13 +15,13 @@ Write your opening paragraph here. Summarise the article and draw the reader in.
 
 Add your second paragraph here. Provide essential context or background.
 
-## First Section Heading 456789
+## First Section Heading
 
 Body paragraph for this section. Replace with your real content.
 
-* Bullet point one
-* Bullet point two
-* Bullet point three
+- Bullet point one
+- Bullet point two
+- Bullet point three
 
 ## Second Section Heading
 
