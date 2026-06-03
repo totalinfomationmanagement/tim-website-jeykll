@@ -1,0 +1,44 @@
+---
+layout: default
+title: News & Updates
+---
+<div class="page-hero">
+  <div class="page-hero-label">TiM - News &amp; Updates</div>
+  <h1>Insights, <em>publications</em><br>and announcements</h1>
+  <p>Perspectives on ICT policy, digital governance, and emerging technology from the TiM team - updated regularly as our work and the sector evolve.</p>
+</div>
+
+<div class="filter-bar">
+  <span>Filter:</span>
+  <button class="filter-btn active" onclick="filterArticles('all',this)">All</button>
+  <button class="filter-btn" onclick="filterArticles('Featured',this)">Featured</button>
+  <button class="filter-btn" onclick="filterArticles('Publication',this)">Publications</button>
+  <button class="filter-btn" onclick="filterArticles('Insight',this)">Insights</button>
+  <button class="filter-btn" onclick="filterArticles('News',this)">News</button>
+</div>
+
+<div class="articles-section">
+  <div class="articles-grid" id="articles-grid">
+    {% for post in site.posts %}
+    <a href="{{ post.url }}" class="article-card {% if forloop.first %}featured{% endif %}" data-tag="{{ post.tag }}">
+      <div class="article-tag">{{ post.tag }}</div>
+      <h2>{{ post.title }}</h2>
+      <p class="article-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+      <div class="article-meta">
+        <span class="article-date">{{ post.date | date: "%B %Y" }}</span>
+        <span class="article-read">Read more</span>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
+
+<script>
+  function filterArticles(tag, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.article-card').forEach(card => {
+      card.style.display = (tag==='all' || card.dataset.tag===tag) ? '' : 'none';
+    });
+  }
+</script>
