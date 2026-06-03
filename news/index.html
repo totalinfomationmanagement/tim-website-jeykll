@@ -1,6 +1,7 @@
 ---
 layout: default
 title: News & Updates
+permalink: /news/
 ---
 <div class="page-hero">
   <div class="page-hero-label">TiM - News &amp; Updates</div>
@@ -20,7 +21,7 @@ title: News & Updates
 <div class="articles-section">
   <div class="articles-grid" id="articles-grid">
     {% for post in site.posts %}
-    <a href="{{ post.url }}" class="article-card {% if forloop.first %}featured{% endif %}" data-tag="{{ post.tag }}">
+    <a href="{{ post.url | relative_url }}" class="article-card {% if forloop.first %}featured{% endif %}" data-tag="{{ post.tag }}">
       <div class="article-tag">{{ post.tag }}</div>
       <h2>{{ post.title }}</h2>
       <p class="article-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
@@ -37,8 +38,8 @@ title: News & Updates
   function filterArticles(tag, btn) {
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    document.querySelectorAll('.article-card').forEach(card => {
-      card.style.display = (tag==='all' || card.dataset.tag===tag) ? '' : 'none';
+    document.querySelectorAll('.article-card').forEach(function(card) {
+      card.style.display = (tag === 'all' || card.dataset.tag === tag) ? '' : 'none';
     });
   }
 </script>

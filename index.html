@@ -124,12 +124,12 @@ title: ICT Policy & Strategy Consultants - Nairobi, Kenya
       <div class="section-label fade-up">Latest</div>
       <h2 class="section-heading fade-up">News &amp; <em>Updates</em></h2>
     </div>
-    <a href="/news/" class="updates-link">All Updates</a>
+    <a href="{{ '/news/' | relative_url }}" class="updates-link">All Updates</a>
   </div>
   <div class="updates-grid">
     {% assign recent = site.posts | limit: 3 %}
     {% for post in recent %}
-    <a href="{{ post.url }}" class="update-card {% if forloop.first %}featured{% endif %} fade-up">
+    <a href="{{ post.url | relative_url }}" class="update-card {% if forloop.first %}featured{% endif %} fade-up">
       <div class="update-tag">{{ post.tag }}</div>
       <h3>{{ post.title }}</h3>
       <div class="update-date">{{ post.date | date: "%B %Y" }}</div>

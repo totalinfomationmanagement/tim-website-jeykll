@@ -1,5 +1,5 @@
 <nav>
-  <a href="/" class="nav-logo">
+  <a href="{{ '/' | relative_url }}" class="nav-logo">
     <svg class="nav-logo-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1043.48 276.75">
   <defs>
     <style>
@@ -25,11 +25,11 @@
 </svg>
   </a>
   <ul class="nav-links">
-    <li><a href="/#about">About</a></li>
-    <li><a href="/#expertise">Expertise</a></li>
-    <li><a href="/#impact">Our Impact</a></li>
-    <li><a href="/news/">Updates</a></li>
-    <li><a href="/#work-with-us" class="nav-cta">Work With Us</a></li>
+    <li><a href="{{ '/' | relative_url }}#about">About</a></li>
+    <li><a href="{{ '/' | relative_url }}#expertise">Expertise</a></li>
+    <li><a href="{{ '/' | relative_url }}#impact">Our Impact</a></li>
+    <li><a href="{{ '/news/' | relative_url }}">Updates</a></li>
+    <li><a href="{{ '/' | relative_url }}#work-with-us" class="nav-cta">Work With Us</a></li>
   </ul>
   <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
     <span></span><span></span><span></span>
@@ -38,12 +38,12 @@
 <div class="nav-overlay" id="nav-overlay"></div>
 <div class="nav-drawer" id="nav-drawer" aria-hidden="true">
   <ul class="nav-drawer-links">
-    <li><a href="/#about" class="drawer-link">About</a></li>
-    <li><a href="/#expertise" class="drawer-link">Expertise</a></li>
-    <li><a href="/#impact" class="drawer-link">Our Impact</a></li>
-    <li><a href="/news/" class="drawer-link">Updates</a></li>
+    <li><a href="{{ '/' | relative_url }}#about" class="drawer-link">About</a></li>
+    <li><a href="{{ '/' | relative_url }}#expertise" class="drawer-link">Expertise</a></li>
+    <li><a href="{{ '/' | relative_url }}#impact" class="drawer-link">Our Impact</a></li>
+    <li><a href="{{ '/news/' | relative_url }}" class="drawer-link">Updates</a></li>
   </ul>
-  <a href="/#work-with-us" class="nav-drawer-cta drawer-link">Work With Us</a>
+  <a href="{{ '/' | relative_url }}#work-with-us" class="nav-drawer-cta drawer-link">Work With Us</a>
   <div class="nav-drawer-contact">
     <p>Contact</p>
     <a href="mailto:waema@uonbi.ac.ke">waema@uonbi.ac.ke</a>
