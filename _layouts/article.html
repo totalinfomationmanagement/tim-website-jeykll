@@ -3,9 +3,9 @@ layout: default
 ---
 <div class="page-hero">
   <div class="page-hero-label">
-    <a href="{{ '/' | relative_url }}">TiM Ltd.</a>
+    <a href="/">TiM Ltd.</a>
     <span>/</span>
-    <a href="{{ '/news/' | relative_url }}">News &amp; Updates</a>
+    <a href="/news/">News &amp; Updates</a>
     <span>/</span>
     {{ page.tag }}
   </div>
@@ -19,7 +19,7 @@ layout: default
 </div>
 
 <div class="article-body">
-  <a href="{{ '/news/' | relative_url }}" class="article-back">Back to all updates</a>
+  <a href="/news/" class="article-back">Back to all updates</a>
   {{ content }}
 </div>
 
@@ -29,7 +29,7 @@ layout: default
   <div class="related-heading">Related articles</div>
   <div class="related-grid">
     {% for item in page.related %}
-    <a href="{{ '/news/' | relative_url }}{{ item.slug }}/" class="related-card">
+    <a href="/news/{{ item.slug }}/" class="related-card">
       <div class="related-card-tag">{{ item.tag }}</div>
       <h3>{{ item.title }}</h3>
       <div class="related-card-date">{{ item.date }}</div>
